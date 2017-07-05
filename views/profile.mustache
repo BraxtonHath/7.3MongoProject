@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>create dir</title>
+  <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+
+
+
+      <div class="flex-inline">
+        <div class="img">
+        <img src="{{avatar}}" alt="">
+      </div>
+      <div class="flex">
+        <h1>{{name}}</h1>
+          {{#job}}
+           <p>{{address.city}},{{address.country}} |{{.}}, {{company}}</p>
+           {{/job}}
+           {{^job}}
+            <p>{{address.city}},{{address.country}} | <span class="orange">Available for hire</span></p>
+           {{/job}}</p>
+        <p>{{email}} | {{phone}}</p>
+      </div>
+      <div class="bottom-info">
+        <div class="education">
+        {{#university}}
+        <p><div class="e"><strong>Education</strong></div> <div class="r">{{.}}</div></p>
+        {{/university}}
+      </div>
+      <div class="flex2">
+        <span><strong class="strong">Skills</strong>
+          {{#skills}}
+          {{.}}
+          {{/skills}}
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+  </body>
+  </html>

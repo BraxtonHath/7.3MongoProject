@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>create dir</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="index-box">
+           {{#users}}
+           <div class="flex-percents">
+             <img src="{{avatar}}" alt="">
+             <div class="infoBox">
+             <h2>{{name}}</h2>
+            {{#job}}
+             <p>{{.}}, {{company}}</p>
+             {{/job}}
+             {{^job}}
+              <p class="orange">Available for hire</p>
+             {{/job}}
+            </div>
+          </div>
+          {{/users}}
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
