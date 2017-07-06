@@ -9,23 +9,37 @@
 </head>
 <body>
 
+  <nav>
+    <form class="robots" action="/index" method="get">
+      <input type="submit" name="" value="robots">
+    </form>
+    <form class="unemployed" action="/unemployed" method="post">
+      <input type="submit" name="unemployed" value="unemployed robots">
+    </form>
+    <form class="employed" action="/employed" method="post">
+      <input type="submit" name="employed" value="employed robots">
+    </form>
+  </nav>
+
+
+
   <div class="container">
     <div class="row">
       <div class="index-box">
-           {{#users}}
-           <div class="flex-percents">
-             <img src="{{avatar}}" alt="">
-             <div class="infoBox">
-             <h2>{{name}}</h2>
+        {{#model}}
+        <div class="flex-percents">
+          <img src="{{avatar}}" alt="">
+          <div class="infoBox">
+            <h2>{{name}}</h2>
             {{#job}}
-             <p>{{.}}, {{company}}</p>
-             {{/job}}
-             {{^job}}
-              <p class="orange">Available for hire</p>
-             {{/job}}
-            </div>
+            <p>{{.}}, {{company}}</p>
+            {{/job}}
+            {{^job}}
+            <p class="orange">Available for hire</p>
+            {{/job}}
           </div>
-          {{/users}}
+        </div>
+        {{/model}}
 
 
 
