@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/index', function(req, res) {
-  const col = req.db.collection("Robots");
+  const col = req.db.collection("robots");
   context = {};
   col.find({}).toArray(function(error, results) {
     // console.log(results);
@@ -48,7 +48,7 @@ app.get('/index/:id', function (req, res) {
 
 
 app.post('/unemployed', function(req, res) {
-  const col = req.db.collection("Robots");
+  const col = req.db.collection("robots");
   context = {};
   col.find({'job': null}).toArray(function(error, results) {
     context.model = results;
@@ -57,7 +57,7 @@ app.post('/unemployed', function(req, res) {
 });
 
 app.post('/employed', function(req, res) {
-  const col = req.db.collection("Robots");
+  const col = req.db.collection("robots");
   context = {};
   col.find({'job': {$ne: null}}).toArray(function(error, results) {
     context.model = results;
