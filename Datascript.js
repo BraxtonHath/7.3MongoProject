@@ -4,7 +4,7 @@ const data = require('./data');
 
 //module.exports = {
 
-MongoClient.connect("mongodb://localhost:27017/Datascriptbraxhouse", function(error, db) {
+MongoClient.connect("mongodb://localhost:27017/Datascript", function(error, db) {
   const collection = db.collection("robots");
 
 

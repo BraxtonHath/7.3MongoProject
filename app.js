@@ -1,6 +1,6 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
-const data = require('./DatascriptBraxHouse')
+const data = require('./Datascript')
 const MongoClient = require("mongodb").MongoClient;
 
 
@@ -15,7 +15,7 @@ app.use(express.static('public'));
 
 
 app.use(function(req, res, next) {
-  MongoClient.connect("mongodb://localhost:27017/Datascriptbraxhouse", function(error, db) {
+  MongoClient.connect("mongodb://localhost:27017/Datascript", function(error, db) {
     req.db = db;
     next();
   });
