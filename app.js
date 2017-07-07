@@ -15,7 +15,7 @@ app.use(express.static('public'));
 
 
 app.use(function(req, res, next) {
-  MongoClient.connect("mongodb://localhost:27017/jmbdb", function(error, db) {
+  MongoClient.connect("mongodb://localhost:27017/Datascriptbraxhouse", function(error, db) {
     req.db = db;
     next();
   });
