@@ -5,16 +5,16 @@ const data = require('./data');
 //module.exports = {
 
 MongoClient.connect("mongodb://localhost:27017/Datascriptbraxhouse", function(error, db) {
-  const Collection = db.collection("Robots");
+  const collection = db.collection("robots");
 
 
-var Robots = [];
+var robots = [];
 
 data.users.forEach(function(users) {
-  Robots.push(users);
+  robots.push(users);
 });
 
-Collection.insertMany(Robots);
+collection.insertMany(robots);
 
 });
 
